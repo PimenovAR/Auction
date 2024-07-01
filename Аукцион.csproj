@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD1C6ADE-9086-4C24-9878-7CD23E197CF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Аукцион</RootNamespace>
+    <AssemblyName>Аукцион</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\db.cs" />
+    <Compile Include="Class\User.cs" />
+    <Compile Include="Class\ВашаСтавка.cs" />
+    <Compile Include="Class\НовыйЛист.cs" />
+    <Compile Include="Class\Ставки.cs" />
+    <Compile Include="Class\Уведом.cs" />
+    <Compile Include="Model\АвтРег.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\АвтРег.Designer.cs">
+      <DependentUpon>АвтРег.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Админ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Админ.Designer.cs">
+      <DependentUpon>Админ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Аукцион.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Аукцион.Designer.cs">
+      <DependentUpon>Аукцион.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\СделатьСтавку.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\СделатьСтавку.Designer.cs">
+      <DependentUpon>СделатьСтавку.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\СозданиеСтавки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\СозданиеСтавки.Designer.cs">
+      <DependentUpon>СозданиеСтавки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Уведомления.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Уведомления.Designer.cs">
+      <DependentUpon>Уведомления.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\ВашиСтавки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\ВашиСтавки.Designer.cs">
+      <DependentUpon>ВашиСтавки.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Model\АвтРег.resx">
+      <DependentUpon>АвтРег.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Админ.resx">
+      <DependentUpon>Админ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Аукцион.resx">
+      <DependentUpon>Аукцион.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\СделатьСтавку.resx">
+      <DependentUpon>СделатьСтавку.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\СозданиеСтавки.resx">
+      <DependentUpon>СозданиеСтавки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Уведомления.resx">
+      <DependentUpon>Уведомления.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Model\ВашиСтавки.resx">
+      <DependentUpon>ВашиСтавки.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icon\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
